@@ -4,6 +4,8 @@ import React from "react";
 const ImageCard = ({image}) => {
     const tags = image.tags.split(",");
     return(
+        
+
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <img src={image.webformatURL} alt="random image" className="w-full"/>
             <div className="px-6 py-4">
@@ -21,10 +23,11 @@ const ImageCard = ({image}) => {
                         <strong>Downloads: </strong> {image.downloads.toLocaleString("en-US")}
                     </li>
                     <li>
-                        <strong>Likes: </strong> {image.likes.toLocaleString("en-US")}
+                        <strong>Likes: </strong> {parseInt(image.likes.toLocaleString("en-US")) > 99 ? <span className="text-purple-500 font-semibold">{image.likes.toLocaleString("en-US")}</span> 
+                        : <span>{image.likes.toLocaleString("en-US")}</span>}
                     </li>
                     <li>
-                        <strong>Type: </strong> {image.type.toLocaleString("en-US")}
+                        <strong>Type: </strong> {image.type.charAt(0).toUpperCase() + image.type.slice(1)}
                     </li>
                     <li>
                         <strong>ID: </strong> {image.id}
