@@ -1,7 +1,7 @@
 <h2 style="text-align: center;" >Pixabay Image Finder</h2>
 
 
-![Website Preview](public\pixabaypreview.png)
+![Website Preview](public/pixabaypreview.png)
 
 > Search for images using the [Pixabay API](https://pixabay.com/) along with views, downlowds, and likes. View image owner's profiles by clicking their usernames. Highly liked images will have a purple counter.
 
